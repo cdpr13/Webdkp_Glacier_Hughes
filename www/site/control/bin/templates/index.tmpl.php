@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="/css/styles.css">
+
 <div class="modern-container">
     <section class="hero-section">
         <div class="hero-content">
@@ -62,13 +62,6 @@
                 <li><i class="fas fa-check-circle"></i> ZeroSum DKP implementation</li>
                 <li><i class="fas fa-check-circle"></i> Mobile-friendly interface</li>
             </ul>
-            
-            <div class="demo-section">
-                <p>Explore our interactive demo:</p>
-                <a href="/demo" class="demo-button">
-                    <i class="fas fa-play"></i> Launch Demo
-                </a>
-            </div>
         </div>
     </section>
 </div>
@@ -221,3 +214,4 @@
         grid-template-columns: 1fr;
     }
 }
+</style>
