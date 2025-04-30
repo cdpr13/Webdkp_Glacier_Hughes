@@ -68,7 +68,7 @@ class dkpUploader {
 		$this->log .= "file loaded - making it into a php array<br />";
 		//convert the lua file to a php array
 		$log = makePhpArray($luaFile);
-
+        error_log(print_r($log, true));
 		$this->log .= "About to run tasks <br />";
 
 
@@ -136,7 +136,9 @@ class dkpUploader {
 		//will be a list of the player recieving it.
 		if($log != "") {
 			foreach($log as $key => $awardEntry) {
-				$this->ParseAwardEntry($guild, $updater, $awardEntry );
+				if (is_array($awardEntry)) {
+					$this->ParseAwardEntry($guild, $updater, $awardEntry);
+				}
 			}
 			//if zerosum awards were created, make sure they
 			//are linked together in the database
@@ -171,6 +173,10 @@ class dkpUploader {
 
 
 	function ParseAwardEntry($guild, $updater, $entry){
+		if (!is_array($entry)) {
+			$this->log .= "Error: Entrada no es un array.<br />";
+			return;
+		}
 		//get the information for this award.
 
 		//create an award instance for this entry
