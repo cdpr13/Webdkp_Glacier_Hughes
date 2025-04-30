@@ -1,0 +1,2 @@
+/docker/volumes/data/mysql
+/docker/volumes/logs/*
