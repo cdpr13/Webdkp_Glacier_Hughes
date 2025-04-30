@@ -1,7 +1,13 @@
-
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+</script>
 <header class="glass-navbar">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <div class="nav-container">
+
         <!-- Logo con efecto hover -->
         <a href="<?=$SiteRoot?>" class="brand-logo">
             <img src="<?=$theme->getAbsDirectory()?>images/header/banner.png" 
@@ -10,9 +16,14 @@
             <span class="guild-name">Glacier Hughes</span>
         </a>
 
+        <!-- Botón Hamburguesa -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <!-- Menú principal -->
         <nav class="main-nav">
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
                     <a href="<?=$SiteRoot?>" class="nav-link">
                         <i class="fas fa-home nav-icon"></i>
@@ -72,7 +83,6 @@
 </header>
 
 <style>
-/* Estilos modernos */
 .glass-navbar {
     background: rgba(16, 18, 27, 0.85);
     backdrop-filter: blur(12px);
@@ -82,7 +92,6 @@
     width: 100%;
     top: 0;
     z-index: 1000;	
-	overflow-x: hidden;
 }
 
 .nav-container {
@@ -91,8 +100,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-	max-width: 98%;
-	gap: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .brand-logo {
@@ -104,7 +113,7 @@
 
 .logo-hover {
     height: 45px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease;
 }
 
 .logo-hover:hover {
@@ -117,7 +126,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -126,7 +135,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -180,7 +189,7 @@
     align-items: center;
     gap: 0.6rem;
     transition: all 0.3s ease;
-	font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 .signup-btn {
@@ -231,43 +240,38 @@
     background: rgba(255,107,107,0.1);
 }
 
-/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* RESPONSIVE STYLES */
 @media (max-width: 1024px) {
-	.brand-logo {
-        gap: 0.5rem;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-	.guild-name {
-        font-size: 1.1rem;
-    }
-
-	.user-nav {
-        gap: 0.8rem;
-    }
-    
     .mobile-menu-btn {
         display: block;
         color: white;
         font-size: 1.5rem;
         cursor: pointer;
     }
-}
 
-@media (max-width: 768px) {
-    .glass-navbar {
-        padding: 0.8rem 0.5rem;
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 1rem;
+        border-radius: 0 0 0 8px;
+        z-index: 999;
     }
-    
+
+    .nav-menu.active {
+        display: flex;
+    }
+
     .nav-link .link-text {
-        display: none; /* Oculta textos en móviles */
-    }
-    
-    .nav-icon {
-        font-size: 1.4rem; /* Iconos más grandes */
+        display: inline;
     }
 }
 </style>
