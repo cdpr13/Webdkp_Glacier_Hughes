@@ -51,6 +51,34 @@ function toggleMobileMenu() {
                         <span class="link-text">GitHub</span>
                     </a>
                 </li>
+                <?php if($siteUser->visitor): ?>
+					<li class="nav-item">
+                        <a href="<?=$SiteRoot?>join" class="auth-btn signup-btn">
+                            <i class="fas fa-user-plus"></i>
+                            <span class="link-text">Registrarse</span>
+                        </a>
+				    </li>
+					<li class="nav-item">
+                        <a href="<?=$SiteRoot?>Login" class="auth-btn login-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a>
+					</li>
+                <?php else: ?>
+				    <li class="nav-item">
+                        <a href="<?=dkpUtil::GetGuildUrl($siteUser->guild)?>" 
+                            class="profile-link">
+                            <i class="fas fa-user-shield profile-icon"></i>
+                            <span class="profile-text">Tabla DKP</span>
+                        </a>
+					</li>
+					<li class="nav-item">
+                        <a href="<?=$SiteRoot?>login?siteUserEvent=logout" 
+                            class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+					</li>	
+                <?php endif; ?>
             </ul>
         </nav>
 
@@ -175,11 +203,6 @@ function toggleMobileMenu() {
     font-size: 1.2rem;
 }
 
-.user-nav {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
 
 .auth-btn {
     padding: 0.6rem 1rem;
