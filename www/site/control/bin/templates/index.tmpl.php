@@ -1,4 +1,5 @@
-Welcome to WebDKP, a free DKP System for World of Warcraft.
+<br />
+Welcome to WebDKP, a free DKP System for World of Warcraft. 
 
 <br />  
 <br />
