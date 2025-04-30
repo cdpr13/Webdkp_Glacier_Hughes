@@ -1,10 +1,9 @@
 <header class="main-header">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="/css/styles.css">
     <!-- Logo -->
     <div class="header-logo">
         <a href="<?= $SiteRoot ?>">
-            <img src="<?= $theme->getAbsDirectory() ?>images/header/logo.jpg" 
+            <img src="<?= $theme->getAbsDirectory() ?>images/header/banner.png" 
                  alt="WebDKP Logo" 
                  class="logo-image">
         </a>
@@ -61,3 +60,60 @@
         </div>
     </nav>
 </header>
+
+<style>
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-image {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+.highlight-link {
+    color: #2ecc71 !important;
+}
+
+.mobile-menu {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+}
