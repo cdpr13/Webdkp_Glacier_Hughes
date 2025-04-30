@@ -91,10 +91,6 @@ function toggleMobileMenu() {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding: 0.8rem 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;	
 }
 
 .nav-container {
