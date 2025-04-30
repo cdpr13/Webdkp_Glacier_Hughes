@@ -77,11 +77,12 @@
     background: rgba(16, 18, 27, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1000;	
+	overflow-x: hidden;
 }
 
 .nav-container {
@@ -90,6 +91,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+	max-width: 98%;
+	gap: 1rem;
 }
 
 .brand-logo {
@@ -111,17 +114,19 @@
 .guild-name {
     color: #7fd8ff;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	white-space: nowrap;
 }
 
 .nav-menu {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
+	flex-wrap: wrap;
 }
 
 .nav-link {
@@ -168,13 +173,14 @@
 }
 
 .auth-btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1rem;
     border-radius: 8px;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.6rem;
     transition: all 0.3s ease;
+	font-size: 0.9rem;
 }
 
 .signup-btn {
@@ -227,8 +233,20 @@
 
 /* Mobile Menu */
 @media (max-width: 1024px) {
+	.brand-logo {
+        gap: 0.5rem;
+    }
+
     .nav-menu {
         display: none;
+    }
+
+	.guild-name {
+        font-size: 1.1rem;
+    }
+
+	.user-nav {
+        gap: 0.8rem;
     }
     
     .mobile-menu-btn {
@@ -236,6 +254,20 @@
         color: white;
         font-size: 1.5rem;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .glass-navbar {
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .nav-link .link-text {
+        display: none; /* Oculta textos en móviles */
+    }
+    
+    .nav-icon {
+        font-size: 1.4rem; /* Iconos más grandes */
     }
 }
 </style>
