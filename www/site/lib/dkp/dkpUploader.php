@@ -16,7 +16,7 @@ include_once("dkpGuild.php");
 //include_once("modules/moduleDkp/dkpUserPermissions.php");
 
 class dkpUploader {
-
+    public $settings;
 	var $addedCount = 0;
 	var $log;
 	/*===========================================================
@@ -196,7 +196,7 @@ class dkpUploader {
 		$this->log.="AWARD: ".$award->reason."<br />";
 
 		//make sure the user has rights to append information to this table
-		if (dkpUserPermissions::currentUserHasPermission("TableUploadLog",$guild->id,$tableid)) {
+		if (dkpUserPermissions::currentUserHasPermission("TableUploadLog",$guild->id, $award->tableid)) {
 
 			//only bother making an insert if people actually recieved the award
 			if($players!="" && is_array($players)){
@@ -246,7 +246,7 @@ class dkpUploader {
 				//we now have a list of the players we want to award. We will
 				//award them all at once. Internally, this uses a single sql query,
 				//greatly speeding up the insert time
-				if(sizeof($playersToAward>0)) {
+				if (!empty($playersToAward)) {
 					$updater->AddDkpToPlayers($playersToAward, $award->tableid, $award);
 				}
 			}
