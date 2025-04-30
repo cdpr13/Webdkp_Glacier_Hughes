@@ -17,3 +17,4 @@ RUN docker-php-ext-install mysqli
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+RUN a2enmod ssl rewrite
