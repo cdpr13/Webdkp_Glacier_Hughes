@@ -82,31 +82,6 @@ function toggleMobileMenu() {
             </ul>
         </nav>
 
-        <!-- Menú de usuario -->
-        <div class="user-nav">
-            <?php if($siteUser->visitor): ?>
-                <a href="<?=$SiteRoot?>join" class="auth-btn signup-btn">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Join</span>
-                </a>
-                <a href="<?=$SiteRoot?>Login" class="auth-btn login-btn">
-                    <i class="fas fa-sign-in-alt"></i>
-                    <span>Login</span>
-                </a>
-            <?php else: ?>
-                <div class="user-profile">
-                    <a href="<?=dkpUtil::GetGuildUrl($siteUser->guild)?>" 
-                       class="profile-link">
-                        <i class="fas fa-user-shield profile-icon"></i>
-                        <span class="profile-text">Your DKP</span>
-                    </a>
-                    <a href="<?=$SiteRoot?>login?siteUserEvent=logout" 
-                       class="logout-btn">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
-                </div>
-            <?php endif; ?>
-        </div>
     </div>
 </header>
 
