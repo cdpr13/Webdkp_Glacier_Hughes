@@ -66,8 +66,7 @@ function toggleMobileMenu() {
 					</li>
                 <?php else: ?>
 				    <li class="nav-item">
-                        <a href="<?=dkpUtil::GetGuildUrl($siteUser->guild)?>" 
-                            class="profile-link">
+                        <a href="<?=dkpUtil::GetGuildUrl($siteUser->guild)?>" class="profile-link">
                             <i class="fas fa-user-shield profile-icon"></i>
                             <span class="profile-text">Tabla DKP</span>
                         </a>
@@ -135,6 +134,7 @@ function toggleMobileMenu() {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+	align-items: center;
 }
 
 .nav-link {
