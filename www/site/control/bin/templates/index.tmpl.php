@@ -1,61 +1,223 @@
-<br />
-Welcome to WebDKP, a free DKP System for World of Warcraft. 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="/css/styles.css">
+<div class="modern-container">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to WebDKP</h1>
+            <p class="hero-subtitle">Advanced DKP Management System for World of Warcraft</p>
+            <button class="cta-button" onclick="document.location='/Join'">Get Started Now</button>
+        </div>
+    </section>
 
-<br />  
-<br />
+    <section class="screenshots-section">
+        <div class="grid-container">
+            <a href="http://www.webdkp.com/images/screenshots/table.jpg" class="screenshot-card" rel="lightbox">
+                <img src="http://www.webdkp.com/images/screenshots/table_small.jpg" alt="DKP Table Preview">
+                <span class="overlay-text">View Table</span>
+            </a>
+            <a href="http://www.webdkp.com/images/screenshots/player.jpg" class="screenshot-card" rel="lightbox">
+                <img src="http://www.webdkp.com/images/screenshots/player_small.jpg" alt="Player Profile Preview">
+                <span class="overlay-text">Player Profile</span>
+            </a>
+            <a href="http://www.webdkp.com/images/screenshots/control.jpg" class="screenshot-card" rel="lightbox">
+                <img src="http://www.webdkp.com/images/screenshots/control_small.jpg" alt="Control Panel Preview">
+                <span class="overlay-text">Control Panel</span>
+            </a>
+        </div>
+        <a href="/Screenshots" class="more-link">Explore More Features →</a>
+    </section>
 
-<a href="http://www.webdkp.com/images/screenshots/table.jpg" rel="lightbox" title="">
-<img class="photo" src="http://www.webdkp.com/images/screenshots/table_small.jpg" /></a>
+    <section class="content-section">
+        <div class="info-panel">
+            <h2 class="section-title">What is DKP?</h2>
+            <p class="highlight-text">Dragon Kill Points (DKP) - Your Fair Loot Distribution System</p>
+            <p>WebDKP revolutionizes guild management with:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-sync-alt feature-icon"></i>
+                    <h3>Real-time Syncing</h3>
+                    <p>Instant updates between in-game addon and web interface</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Officer Controls</h3>
+                    <p>Granular permissions and access management</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Advanced Analytics</h3>
+                    <p>Track participation and contribution metrics</p>
+                </div>
+            </div>
+        </div>
 
-<a href="http://www.webdkp.com/images/screenshots/player.jpg" rel="lightbox" title="">
-<img class="photo" src="http://www.webdkp.com/images/screenshots/player_small.jpg" /></a>
+        <div class="cta-section">
+            <h2 class="section-title">Why Choose WebDKP?</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> Complete in-game integration</li>
+                <li><i class="fas fa-check-circle"></i> Cloud-based backups</li>
+                <li><i class="fas fa-check-circle"></i> Multi-table support</li>
+                <li><i class="fas fa-check-circle"></i> ZeroSum DKP implementation</li>
+                <li><i class="fas fa-check-circle"></i> Mobile-friendly interface</li>
+            </ul>
+            
+            <div class="demo-section">
+                <p>Explore our interactive demo:</p>
+                <a href="/demo" class="demo-button">
+                    <i class="fas fa-play"></i> Launch Demo
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
 
-<a href="http://www.webdkp.com/images/screenshots/control.jpg" rel="lightbox" title="">
-<img class="photo" src="http://www.webdkp.com/images/screenshots/control_small.jpg" /></a>
+<style>
+.modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
 
-<div style="padding-left:10px;margin-top:-10px"><a href="/Screenshots">More Screenshots</a></div>
-<br />
+.hero-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
-<input type="button" class="largeButton" value="Join Now!" onclick="document.location='/Join'">
-<br />
-<br />
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
 
-DKP, short for “<a href="http://www.wowwiki.com/Dragon_Kill_Points">Dragon Kills Points</a>”, is a method of rewarding items to players in game based on their contribution. In general, users receive ‘DKP Points’ whenever they participate in raid or help the guild. They can then ‘spend’ these points when items drop during raids to purchase them. In this way, players who consistently help the guild can fairly earn items.
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
 
-<br />
-<br />
+.cta-button {
+    background: #e74c3c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
 
-WebDKP is a free system that helps manage your Guilds DKP and makes your life much easier. It has two parts: an in game Addon for awarding and viewing DKP, and this site that allows you to share your DKP table online. The site and Addon are easy to use and can literally save hours of work. The service is provided for free and is supported by advertisements placed next to your Guild’s table. If you’re guild prefers, you can disable the advertisements for a small monthly fee.
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
 
-<br />
-<br />
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
 
-WebDKP has many features and is flexible to fit different methods of awarding DKP.
+.screenshot-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
 
-<br />
-<br />
+.screenshot-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-<h2>Features</h2>
+.screenshot-card:hover {
+    transform: translateY(-5px);
+}
 
-<br />
-<ul>
-	<li>Complete access to your DKP in game</li>
-	<li>One Click uploading to the site</li>
-	<li>Remote DKP, so you can integrate DKP on your own guild site</li>
-	<li>Zerosum DKP Support</li>
-	<li>Lifetime DKP</li>
-	<li>Loot Tables</li>
-	<li>Officer Accounts with Specialized Permissions</li>
-	<li>Multiple DKP Tables under one account</li>
-	<li>Rich table editing tools to update your table</li>
-	<li>Backups</li>
-	<li>Bidding Support</li>
-	<li>And more...</li>
-</ul>
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-<br />
+.screenshot-card:hover .overlay-text {
+    opacity: 1;
+}
 
-Creating an account is quick and easy. If you’re unsure, you can also check out our demo table. After creating an account, you may also want to check out our online tutorial that will guide you through many of the features of WebDKP. Enjoy!
-<br />
-<br />
-<br />
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.feature-list i {
+    color: #27ae60;
+    margin-right: 0.5rem;
+}
+
+.demo-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #2980b9;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.demo-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
