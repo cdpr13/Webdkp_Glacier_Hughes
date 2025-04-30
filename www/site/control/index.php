@@ -15,7 +15,7 @@ class pageIndex extends page {
 	function area2()
 	{
 		$this->border = 1;
-		$this->title = "Welcome";
+		$this->title = "Bienvenidas ratitas de Glacier Hughes";
 		return $this->fetch("index.tmpl.php");
 	}
 
