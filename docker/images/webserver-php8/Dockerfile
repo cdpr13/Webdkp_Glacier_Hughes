@@ -8,6 +8,8 @@ RUN apt-get -y update --fix-missing && \
 # Install tools && libraries
 RUN apt-get -y install --fix-missing apt-utils nano wget dialog \
   build-essential git curl \
+  certbot \
+  python3-certbot-apache\
   && rm -rf /var/lib/apt/lists/*
 
 # Other PHP Extensions
