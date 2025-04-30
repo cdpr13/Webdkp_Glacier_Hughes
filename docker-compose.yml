@@ -16,6 +16,7 @@ services:
       - ${PHP_INI}:/usr/local/etc/php/php.ini
       - ${VHOSTS_DIR}:/etc/apache2/sites-enabled
       - ${APACHE_LOG_DIR}:/var/log/apache2
+      - ./certs:/etc/letsencrypt
   mysql:
     build:
       context: ./docker/images/mysql
