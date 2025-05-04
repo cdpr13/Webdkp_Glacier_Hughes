@@ -1,20 +1,43 @@
 <?=$tabs?>
-<div style="position: relative; margin-bottom: 1em;">
-  <!-- Imagen grande superpuesta al contenedor -->
+<div 
+  id="banner-overlay" 
+  style="
+    position: fixed;
+    top: 100px;           /* ajusta verticalmente */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;         /* ancho fijo más pequeño */
+    pointer-events: none; /* deja pasar clicks */
+    z-index: 999;
+  "
+>
   <img 
     src="/themes/default/images/sobrine.png" 
     alt="Banner sobre tabla"
     style="
-      position: fixed;
-      top: 100px;      /* ajusta para que quede justo encima de la tabla */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;      /* o el ancho que prefieras */
-      max-width: 1200px;
-      z-index: 999;    /* encima de todo */
-      pointer-events: none;  /* para que no interfiera con clicks en la tabla */
+      display: block;
+      width: 100%;        /* ocupa todo el ancho del contenedor */
+      height: auto;
     "
   >
+
+  <!-- Texto superpuesto -->
+  <div 
+    style="
+      position: absolute;
+      bottom: 10px;       /* a 10px del fondo del contenedor */
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 1.2em;
+      text-shadow: 0 0 4px rgba(0,0,0,0.7);
+      pointer-events: none;
+    "
+  >
+    ¡La foto del gran Sobrine!
+  </div>
+</div>
 <div style="float:right"><?=$filter?></div>
 <?=$tableselect?>
 <br />
