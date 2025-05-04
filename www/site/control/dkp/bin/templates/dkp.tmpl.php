@@ -1,4 +1,20 @@
 <?=$tabs?>
+<div style="position: relative; margin-bottom: 1em;">
+  <!-- Imagen grande superpuesta al contenedor -->
+  <img 
+    src="images/sobrine.png" 
+    alt="Banner sobre tabla"
+    style="
+      position: fixed;
+      top: 100px;      /* ajusta para que quede justo encima de la tabla */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;      /* o el ancho que prefieras */
+      max-width: 1200px;
+      z-index: 999;    /* encima de todo */
+      pointer-events: none;  /* para que no interfiera con clicks en la tabla */
+    "
+  >
 <div style="float:right"><?=$filter?></div>
 <?=$tableselect?>
 <br />
