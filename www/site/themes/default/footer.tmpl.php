@@ -1,3 +1,3 @@
 <div id="footer">
-  Created by <a href="http://www.zeddic.com">Scott Bailey</a>
+  Created by <a href="https://github.com/cdpr13">Cristian Pacheco(Fantasma)</a>
 </div>

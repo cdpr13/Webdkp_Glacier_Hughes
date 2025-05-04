@@ -43,7 +43,7 @@ function toggleMobileMenu() {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/zeddic/webdkp" 
+                    <a href="https://github.com/cdpr13/Webdkp_Glacier_Hughes"
                        class="nav-link external"
                        target="_blank"
                        rel="noopener noreferrer">
