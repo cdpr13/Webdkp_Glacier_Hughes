@@ -2,7 +2,7 @@
 <div style="position: relative; margin-bottom: 1em;">
   <!-- Imagen grande superpuesta al contenedor -->
   <img 
-    src="/www/site/themes/default/images/sobrine.png" 
+    src="/themes/default/images/sobrine.png" 
     alt="Banner sobre tabla"
     style="
       position: fixed;
