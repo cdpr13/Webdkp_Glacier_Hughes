@@ -3,11 +3,11 @@
   id="banner-overlay" 
   style="
     position: fixed;
-    top: 100px;           /* ajusta verticalmente */
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 400px;         /* ancho fijo más pequeño */
-    pointer-events: none; /* deja pasar clicks */
+    width: 400px;
+    pointer-events: none;
     z-index: 999;
   "
 >
@@ -16,27 +16,30 @@
     alt="Banner sobre tabla"
     style="
       display: block;
-      width: 100%;        /* ocupa todo el ancho del contenedor */
+      width: 100%;
       height: auto;
+      opacity: 0.5;      /* 50% de transparencia */
     "
   >
 
-  <!-- Texto superpuesto -->
   <div 
     style="
       position: absolute;
-      bottom: 10px;       /* a 10px del fondo del contenedor */
+      bottom: 10px;
       left: 0;
       width: 100%;
       text-align: center;
       color: white;
       font-size: 1.2em;
       text-shadow: 0 0 4px rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,0.4);  /* fondo semitransparente */
+      padding: 5px 0;
       pointer-events: none;
     "
   >
-    ¡La foto del gran Sobrine!
+    ¡El poderoso Sobrine!
   </div>
+</div>
 </div>
 <div style="float:right"><?=$filter?></div>
 <?=$tableselect?>
