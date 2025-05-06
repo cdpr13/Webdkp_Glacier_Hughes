@@ -17,6 +17,7 @@ services:
       - ${VHOSTS_DIR}:/etc/apache2/sites-enabled
       - ${APACHE_LOG_DIR}:/var/log/apache2
       - ./certs:/etc/letsencrypt
+    command: bash -c "echo 'ServerName localhost' >> /etc/apache2/apache2.conf && docker-php-entrypoint apache2-foreground"
   mysql:
     build:
       context: ./docker/images/mysql
